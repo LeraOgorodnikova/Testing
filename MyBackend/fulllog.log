@@ -1,0 +1,32 @@
+2017-03-25 16:31:49,601 [DEBUG][main            ][Tests.DatasetTest] - Не сущ. категории 'Досуг и отдых'
+2017-03-25 16:31:49,601 [DEBUG][main            ][Tests.DatasetTest] - Не существует категории: 'Досуг и отдых'
+2017-03-25 16:37:33,479 [DEBUG][main            ][Tests.DatasetTest] - id категории - 495
+2017-03-25 16:38:33,067 [DEBUG][main            ][Tests.DatasetTest] - id категории - 495
+2017-03-25 16:42:06,090 [DEBUG][main            ][Tests.DatasetTest] - id категории - 495
+2017-03-25 16:43:09,520 [DEBUG][main            ][Tests.DatasetTest] - id категории - 495
+2017-03-25 16:43:09,755 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:18:02,136 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:18:02,347 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:23:19,834 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:27:51,845 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:33:58,326 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:33:58,546 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:39:33,162 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:41:39,714 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:42:37,465 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:42:37,684 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:42:37,746 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:42:37,887 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:42:37,949 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:42:38,090 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:42:38,153 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:42:38,324 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:46:30,752 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:47:58,225 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:47:58,382 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:47:58,444 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:47:58,710 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:47:58,772 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:47:58,913 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
+2017-03-25 17:47:59,022 [DEBUG][main            ][Tests.DatasetTest] - category id - 495
+2017-03-25 17:47:59,225 [DEBUG][main            ][Tests.DatasetTest] - [{"global_id":62829117,"Number":1,"Cells":{"global_id":62829117,"TicketCost":0}}]
