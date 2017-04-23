@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1492954589488" stop="1492954613537" version="1.4.23" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : iitfrontend</name>
+    <title>Default Suite : iitfrontend</title>
+    <test-cases>
+        <test-case start="1492954595819" stop="1492954612087" status="passed">
+            <name>ImportCategoryJson</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="9312@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

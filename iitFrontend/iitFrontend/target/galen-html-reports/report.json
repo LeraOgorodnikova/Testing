@@ -1,0 +1,115 @@
+{
+  "tests" : [ {
+    "name" : "MainPageTest#DMru20",
+    "startedAt" : 1492964544086,
+    "endedAt" : 1492964566434,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "1-mainpagetest-dmru20",
+    "duration" : 22348,
+    "failed" : false
+  }, {
+    "name" : "MainPageTest#DMru21",
+    "startedAt" : 1492964571878,
+    "endedAt" : 1492964597333,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "2-mainpagetest-dmru21",
+    "duration" : 25455,
+    "failed" : false
+  }, {
+    "name" : "MainPageTest#DMru22",
+    "startedAt" : 1492964602136,
+    "endedAt" : 1492964625416,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "3-mainpagetest-dmru22",
+    "duration" : 23280,
+    "failed" : false
+  }, {
+    "name" : "MainPageTest#DMru23",
+    "startedAt" : 1492964630801,
+    "endedAt" : 1492964654685,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "4-mainpagetest-dmru23",
+    "duration" : 23884,
+    "failed" : false
+  }, {
+    "name" : "MainPageTest#DMru25",
+    "startedAt" : 1492964659998,
+    "endedAt" : 1492964687756,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "5-mainpagetest-dmru25",
+    "duration" : 27758,
+    "failed" : false
+  }, {
+    "name" : "MainPageTest#activeCitizenExistenceCheck",
+    "startedAt" : 1492964693358,
+    "endedAt" : 1492964699946,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "6-mainpagetest-activecitizenexistencecheck",
+    "duration" : 6588,
+    "failed" : false
+  }, {
+    "name" : "MainPageTest#categoriesNumberCheck",
+    "startedAt" : 1492964704504,
+    "endedAt" : 1492964709429,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "7-mainpagetest-categoriesnumbercheck",
+    "duration" : 4925,
+    "failed" : false
+  }, {
+    "name" : "MainPageTest#openPage",
+    "startedAt" : 1492964714310,
+    "endedAt" : 1492964733353,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 1,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "8-mainpagetest-openpage",
+    "duration" : 19043,
+    "failed" : false
+  } ]
+}

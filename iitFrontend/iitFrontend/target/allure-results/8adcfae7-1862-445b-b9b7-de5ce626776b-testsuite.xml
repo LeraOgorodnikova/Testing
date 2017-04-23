@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1492964535992" stop="1492964734354" version="1.4.23" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : iitfrontend</name>
+    <title>Default Suite : iitfrontend</title>
+    <test-cases>
+        <test-case start="1492964544127" stop="1492964566144" status="passed">
+            <name>DMru20</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1492964571882" stop="1492964597323" status="passed">
+            <name>DMru21</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1492964602141" stop="1492964625407" status="passed">
+            <name>DMru22</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1492964630805" stop="1492964654678" status="passed">
+            <name>DMru23</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1492964660003" stop="1492964687749" status="passed">
+            <name>DMru25</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1492964693361" stop="1492964699944" status="passed">
+            <name>activeCitizenExistenceCheck</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1492964704508" stop="1492964709425" status="passed">
+            <name>categoriesNumberCheck</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1492964714313" stop="1492964733351" status="passed">
+            <name>openPage</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-JMMP3ER"/>
+                <label name="thread" value="5244@DESKTOP-JMMP3ER.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
