@@ -4,3 +4,7 @@
 [0422/191504.390:ERROR:exception_snapshot_win.cc(87)] thread ID 2964 not found in process
 [0422/191504.390:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
 [0422/191504.390:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения.  (0xc000010a)
+[0502/123939.626:ERROR:process_info.cc(625)] range at 0x2aec2f2200000000, size 0x1c0 fully unreadable
+[0502/123939.627:ERROR:process_info.cc(625)] range at 0x2aec2f8600000000, size 0x1c0 fully unreadable
+[0502/123939.627:ERROR:process_info.cc(625)] range at 0x0, size 0x1c0 fully unreadable
+[0502/123939.725:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Попытка доступа к процессу, выполняющему процедуру завершения.  (0xc000010a)

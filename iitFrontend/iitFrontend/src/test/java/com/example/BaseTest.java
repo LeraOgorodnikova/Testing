@@ -5,9 +5,6 @@ import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.testng.TextReport;
 import com.example.constants.Constants;
 import com.galenframework.testng.GalenTestNgTestBase;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -15,11 +12,18 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
-import java.io.IOException;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import static com.codeborne.selenide.Selenide.*;
+
+import java.io.IOException;
+
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 
 
 @Listeners({ TextReport.class, ScreenShotListener.class })
@@ -72,5 +76,11 @@ public abstract class BaseTest extends GalenTestNgTestBase {
 
     protected void checkPageView(String specFile) throws IOException{
         checkLayout(specFile, Collections.singletonList(browserScreen));
+    }
+
+    public void registerNewTab()
+    {
+        String handleWin = (String) getWebDriver().getWindowHandles().toArray()[1];
+        switchTo().window(handleWin);
     }
 }

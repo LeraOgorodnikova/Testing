@@ -5,24 +5,14 @@ import  com.codeborne.selenide.testng.annotations.Report;
 import com.example.BaseTest;
 import com.example.components.*;
 import com.example.pages.DataPage;
-import com.example.pages.InfoParkPage;
 import com.example.pages.MainPage;
-import com.example.pages.MapPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.util.Set;
-
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static org.testng.AssertJUnit.assertTrue;
 
 @Test
 @Report
@@ -30,7 +20,6 @@ public class MainPageTest extends BaseTest {
 
     private static final String CATEGORY_NAME = "Досуг и отдых";
     private static final String CATEGORY_ID = "162";
-    private static final String ITEM_LIST_NAME = "Парковые территории";
 
     @Test
     public void categoriesNumberCheck() {
@@ -56,21 +45,23 @@ public class MainPageTest extends BaseTest {
         page.navigate();
         Categories categories = page.getCategories();
         categories.getCategoryByName(CATEGORY_NAME).getUnit().click();
-
-        DataPage dataPage = page(DataPage.class);
-        dataPage.shouldBeOpened();
-        dataPage.getSelectedItem().getTextElement().shouldHave(text(CATEGORY_NAME));
     }
 
     @Test
     public void DMru20_infoAboutCategory(){
         openPage();
 
-        SelenideElement item = $(By.xpath("//*[@id=\"datasets\"]/div[2]/ul/li[7]/ul/li[1]"));
-        item.findElement(By.id("descLink")).click();
+        DataPage dataPage = page(DataPage.class);
+        dataPage.shouldBeOpened();
+        dataPage.getSelectedItem().getTextElement().shouldHave(text(CATEGORY_NAME));
+
+        ItemCategory itemCategories = dataPage.getItemCategory();
+
+        SelenideElement item = itemCategories.getCategoryByName("Аттракционы в скверах и парках").getDescLink();
+        Assert.assertTrue(item.isDisplayed());
+        item.click();
 
         boolean displayed = $(By.xpath("//*[@id=\"dropDesc\"]")).isDisplayed();
-
         Assert.assertTrue(displayed);
     }
 
@@ -78,90 +69,91 @@ public class MainPageTest extends BaseTest {
     public void DMru21_exportData() {
         openPage();
 
-        SelenideElement item = $(By.xpath("//*[@id=\"datasets\"]/div[2]/ul/li[7]/ul/li[1]"));
+        DataPage dataPage = page(DataPage.class);
+        dataPage.shouldBeOpened();
+        dataPage.getSelectedItem().getTextElement().shouldHave(text(CATEGORY_NAME));
 
-        WebElement export = item.findElement(By.className("export"));
-        export.click();
+        ItemCategory itemCategories = dataPage.getItemCategory();
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        SelenideElement itemExport = itemCategories.getCategoryByName("Ботанические сады").getExport();
+        Assert.assertTrue(itemExport.isDisplayed());
+        itemExport.click();
 
-        WebElement exportJson = export.findElement(By.xpath("//*[@id=\"dropExport\"]/li[1]/div"));
-        Assert.assertTrue(exportJson.isDisplayed());
+        SelenideElement itemJson = $(By.xpath("//*[@id=\"dropExport\"]/li[1]/div/a"));
+        Assert.assertEquals(itemJson.getText(),"json\n5 Kb");
+        Assert.assertTrue(itemJson.isDisplayed());
 
-        WebElement passport = item.findElementById("dropPassportLink");
-        passport.click();
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        WebElement passportJson = export.findElement(By.xpath("//*[@id=\"dropPass\"]/li[1]/a"));
-        Assert.assertTrue(passportJson.isDisplayed());
     }
 
     @Test
     public void DMru22_filterCategory(){
         openPage();
 
-        $(By.xpath("//*[@id=\"datasets\"]/div[2]/ul/li[7]/ul/li[1]")).click();
+        DataPage dataPage = page(DataPage.class);
+        dataPage.shouldBeOpened();
+        dataPage.getSelectedItem().getTextElement().shouldHave(text(CATEGORY_NAME));
 
-        String handlewindow = (String) getWebDriver().getWindowHandles().toArray()[1];
-        switchTo().window(handlewindow);
+        ItemCategory itemCategories = dataPage.getItemCategory();
+        itemCategories.getCategoryByName("Аквапарки").getUnit().click();
+        registerNewTab();
 
-        $(By.className("settings")).click();
-        $("#dropColumns > div > ul > li:nth-child(5)").click();
+        SelenideElement itemConfig = $(By.cssSelector("#rows-caption > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1) > a:nth-child(3)"));
+        Assert.assertTrue(itemConfig.isDisplayed());
+        itemConfig.click();
 
-        Assert.assertFalse($("#rows-content > thead > tr:nth-child(1) > th:nth-child(6)").isDisplayed());
+        SelenideElement itemFilter = $(By.cssSelector("#dropColumns > div > ul > li:nth-child(4)"));
+        Assert.assertTrue(itemFilter.isDisplayed());
+        itemFilter.click();
+
+        SelenideElement itemFilterRow = $(By.cssSelector("#rows-content > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(5)"));
+        Assert.assertTrue(itemFilterRow.isDisplayed());
+        Assert.assertEquals(itemFilterRow.getText(),"Район");
+
     }
 
     @Test
     public void DMru23_mapCategory(){
         openPage();
 
-        $(By.xpath("//*[@id=\"datasets\"]/div[2]/ul/li[7]/ul/li[1]")).click();
+        DataPage dataPage = page(DataPage.class);
+        dataPage.shouldBeOpened();
+        dataPage.getSelectedItem().getTextElement().shouldHave(text(CATEGORY_NAME));
 
-        String handlewindow = (String) getWebDriver().getWindowHandles().toArray()[1];
-        switchTo().window(handlewindow);
+        ItemCategory itemCategories = dataPage.getItemCategory();
+        itemCategories.getCategoryByName("Весенние фестивали").getUnit().click();
+        registerNewTab();
 
-        $(By.xpath("//*[@id=\"app\"]/div[3]/ul/li[2]")).click();
 
-        SelenideElement map = $(By.id("map"));
+        SelenideElement itemMap = $(By.xpath("//*[@id=\"app\"]/div[3]/ul/li[2]/a"));
+        Assert.assertTrue(itemMap.isDisplayed());
+        itemMap.click();
+        registerNewTab();
 
-        Assert.assertTrue(map.isDisplayed());
+        Assert.assertTrue($(By.cssSelector("#map")).isDisplayed());
+
     }
 
     @Test
     public void DMru25_exportAllData(){
         openPage();
 
-        $(By.xpath("//*[@id=\"datasets\"]/div[2]/ul/li[7]/ul/li[1]")).click();
+        DataPage dataPage = page(DataPage.class);
+        dataPage.shouldBeOpened();
+        dataPage.getSelectedItem().getTextElement().shouldHave(text(CATEGORY_NAME));
 
-        String handlewindow = (String) getWebDriver().getWindowHandles().toArray()[1];
-        switchTo().window(handlewindow);
+        ItemCategory itemCategories = dataPage.getItemCategory();
+        itemCategories.getCategoryByName("Детские игровые площадки в парках").getUnit().click();
 
-        $(By.id("dropDepartmentsLink")).click();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        $(By.cssSelector("#dropDownloads > li:nth-child(2)")).click();
+        registerNewTab();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        SelenideElement itemExport = $(By.cssSelector("#dropDepartmentsLink"));
+        Assert.assertTrue(itemExport.isDisplayed());
+        itemExport.shouldHave(text("Скачать"));
+        itemExport.click();
 
-        SelenideElement downloadFormats = $(By.cssSelector("#dropDownloads"));
+        SelenideElement itemJson = $(By.cssSelector("#dropDownloads > li:nth-child(1) > div:nth-child(1) > a:nth-child(1)"));
+        Assert.assertEquals(itemJson.getText(),".json\n1 Mb");
+        Assert.assertTrue(itemJson.isDisplayed());
 
-        Assert.assertFalse(downloadFormats.isDisplayed());
     }
-
 }
